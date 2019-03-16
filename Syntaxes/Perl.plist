@@ -1430,7 +1430,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"HTML"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"HTML")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1462,7 +1462,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^\s*HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1481,7 +1481,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"XML"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"XML")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1513,7 +1513,7 @@
 			<key>contentName</key>
 			<string>text.xml.embedded.perl</string>
 			<key>end</key>
-			<string>(^XML$)</string>
+			<string>(^\s*XML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1532,7 +1532,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"CSS"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"CSS")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1564,7 +1564,7 @@
 			<key>contentName</key>
 			<string>text.css.embedded.perl</string>
 			<key>end</key>
-			<string>(^CSS$)</string>
+			<string>(^\s*CSS$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1583,7 +1583,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"JAVASCRIPT"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"JAVASCRIPT")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1615,7 +1615,7 @@
 			<key>contentName</key>
 			<string>text.js.embedded.perl</string>
 			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
+			<string>(^\s*JAVASCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1634,7 +1634,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"SQL"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"SQL")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1666,7 +1666,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^\s*SQL$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1685,7 +1685,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"POSTSCRIPT"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"POSTSCRIPT")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1717,7 +1717,7 @@
 			<key>contentName</key>
 			<string>text.postscript.embedded.perl</string>
 			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
+			<string>(^\s*POSTSCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1736,7 +1736,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *"([^"]*)"))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?"([^"]*)")(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1768,7 +1768,7 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.doublequote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^\s*\3$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1783,7 +1783,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'HTML'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'HTML')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1815,7 +1815,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^\s*HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1826,7 +1826,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'XML'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'XML')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1858,7 +1858,7 @@
 			<key>contentName</key>
 			<string>text.xml.embedded.perl</string>
 			<key>end</key>
-			<string>(^XML$)</string>
+			<string>(^\s*XML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1869,7 +1869,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'CSS'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'CSS')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1901,7 +1901,7 @@
 			<key>contentName</key>
 			<string>text.css.embedded.perl</string>
 			<key>end</key>
-			<string>(^CSS$)</string>
+			<string>(^\s*CSS$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1912,7 +1912,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'JAVASCRIPT'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'JAVASCRIPT')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1944,7 +1944,7 @@
 			<key>contentName</key>
 			<string>text.js.embedded.perl</string>
 			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
+			<string>(^\s*JAVASCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1955,7 +1955,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'SQL'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'SQL')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -1987,7 +1987,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^\s*SQL$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -1998,7 +1998,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'POSTSCRIPT'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'POSTSCRIPT')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2030,7 +2030,7 @@
 			<key>contentName</key>
 			<string>source.postscript.embedded.perl</string>
 			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
+			<string>(^\s*POSTSCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2041,7 +2041,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *'([^']*)'))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?'([^']*)')(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2073,11 +2073,11 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.quote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^\s*\3$)</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *\\((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?\\((?![=\d\$\( ])[^;,'"`\s\)]*))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2109,11 +2109,11 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.quote.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^\s*\3$)</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *`([^`]*)`))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?`([^`]*)`)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2145,7 +2145,7 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.backtick.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^\s*\3$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2160,7 +2160,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *HTML\b))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?HTML\b)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2192,7 +2192,7 @@
 			<key>contentName</key>
 			<string>text.html.embedded.perl</string>
 			<key>end</key>
-			<string>(^HTML$)</string>
+			<string>(^\s*HTML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2211,7 +2211,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *XML\b))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?XML\b)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2243,7 +2243,7 @@
 			<key>contentName</key>
 			<string>text.xml.embedded.perl</string>
 			<key>end</key>
-			<string>(^XML$)</string>
+			<string>(^\s*XML$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2262,7 +2262,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *JAVASCRIPT\b))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?JAVASCRIPT\b)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2294,7 +2294,7 @@
 			<key>contentName</key>
 			<string>source.js.embedded.perl</string>
 			<key>end</key>
-			<string>(^JAVASCRIPT$)</string>
+			<string>(^\s*JAVASCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2313,7 +2313,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *SQL\b))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?SQL\b)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2345,7 +2345,7 @@
 			<key>contentName</key>
 			<string>source.sql.embedded.perl</string>
 			<key>end</key>
-			<string>(^SQL$)</string>
+			<string>(^\s*SQL$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2364,7 +2364,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *POSTSCRIPT\b))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?POSTSCRIPT\b)(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2396,7 +2396,7 @@
 			<key>contentName</key>
 			<string>source.postscript.embedded.perl</string>
 			<key>end</key>
-			<string>(^POSTSCRIPT$)</string>
+			<string>(^\s*POSTSCRIPT$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -2415,7 +2415,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(((&lt;&lt;) *((?![=\d\$\( ])[^;,'"`\s\)]*)))(.*)\n?</string>
+			<string>((&lt;&lt;) *~?((?![=\d\$\( ])[^;,'"`\s\)]*))(.*)\n?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -2447,7 +2447,7 @@
 			<key>contentName</key>
 			<string>string.unquoted.heredoc.perl</string>
 			<key>end</key>
-			<string>(^\4$)</string>
+			<string>(^\s*\3$)</string>
 			<key>patterns</key>
 			<array>
 				<dict>
